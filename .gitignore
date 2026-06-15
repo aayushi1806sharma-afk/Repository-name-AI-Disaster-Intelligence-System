@@ -3,3 +3,8 @@ data/
 __pycache__/
 .ipynb_checkpoints/
 *.pth
+
+.env
+*.pyc
+reports/*.pdf
+.DS_Store
