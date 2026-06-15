@@ -1,10 +1,10 @@
-🚨 AI-Powered Disaster Intelligence System
+# 🚨 AI-Powered Disaster Intelligence System
 
 An AI-powered disaster intelligence platform that combines Deep Learning, Computer Vision, Explainable AI, Real-Time Weather Intelligence, and Risk Assessment to analyze disaster-related images and assist in disaster monitoring and decision support.
 
 The system classifies images into multiple disaster categories and provides visual explanations, risk assessment, weather intelligence, and automated reporting through an interactive Streamlit dashboard.
 
-📌 Project Overview
+## 📌 Project Overview
 
 This project uses MobileNetV2 Transfer Learning to classify disaster-related images into five categories:
 
@@ -22,7 +22,7 @@ Grad-CAM explainability
 Batch image analysis
 PDF report generation
 Interactive dashboard visualization
-✨ Features
+## ✨ Features
 🤖 AI Disaster Classification
 Multi-class disaster image classification
 MobileNetV2-based transfer learning model
@@ -54,7 +54,7 @@ Risk assessment reports
 Streamlit-based UI
 Visualization tools
 Real-time prediction interface
-🏗 System Architecture
+## 🏗 System Architecture
 Image Input
      │
      ▼
@@ -110,7 +110,7 @@ compute_class_weight()
 from Scikit-Learn.
 - **Class Imbalance Handling:** Weighted Cross-Entropy Loss using `sklearn.compute_class_weight`
 
-📈 Model Performance
+## 📈 Model Performance
 Validation Accuracy
 
 89%
@@ -129,7 +129,7 @@ Validation Accuracy
 ### Confusion Matrix
 ![Confusion Matrix](reports/confusion_matrix.png)
 
-🛠 Technology Stack
+## 🛠 Technology Stack
 Programming Language
 Python
 Deep Learning
@@ -150,7 +150,7 @@ Streamlit
 APIs
 OpenWeatherMap API
 
-📂 Project Structure
+## 📂 Project Structure
 AI_Disaster_Intelligence_System/
 │
 ├── app.py
@@ -170,7 +170,7 @@ AI_Disaster_Intelligence_System/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-🚀 Installation
+## 🚀 Installation
 Clone Repository
 git clone https://github.com/aayushi1806sharma-afk/Repository-name-AI-Disaster-Intelligence-System.git
 cd Repository-name-AI-Disaster-Intelligence-System
@@ -181,7 +181,7 @@ Windows
 venv\Scripts\activate
 Linux / Mac
 source venv/bin/activate
-Install Dependencies
+## Install Dependencies
 pip install -r requirements.txt
 Run Application
 streamlit run app.py
@@ -197,7 +197,7 @@ Live disaster alert dashboards
 Multi-disaster severity estimation
 Cloud deployment
 Mobile application support
-📚 Learning Outcomes
+## 📚 Learning Outcomes
 
 This project helped in understanding:
 
@@ -209,7 +209,7 @@ Risk Assessment Systems
 Streamlit Application Development
 API Integration
 End-to-End ML Project Development
-👩‍💻 Author
+##👩‍💻 Author
 
 Aayushi Sharma
 
