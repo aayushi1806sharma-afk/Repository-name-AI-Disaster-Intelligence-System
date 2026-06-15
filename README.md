@@ -1,23 +1,119 @@
-# 🚨 AI-Powered Disaster Intelligence System
+🚨 AI-Powered Disaster Intelligence System
 
-A computer vision system that classifies disaster-related images into 5 categories — **Fire, Flood, Landslide, Normal, and Smoke** — using transfer learning (MobileNetV2) and PyTorch. Includes a Streamlit web app for real-time predictions.
+An AI-powered disaster intelligence platform that combines Deep Learning, Computer Vision, Explainable AI, Real-Time Weather Intelligence, and Risk Assessment to analyze disaster-related images and assist in disaster monitoring and decision support.
 
+The system classifies images into multiple disaster categories and provides visual explanations, risk assessment, weather intelligence, and automated reporting through an interactive Streamlit dashboard.
+
+📌 Project Overview
+
+This project uses MobileNetV2 Transfer Learning to classify disaster-related images into five categories:
+
+🔥 Fire
+🌊 Flood
+⛰️ Landslide
+🌫️ Smoke
+✅ Normal
+
+In addition to image classification, the platform includes:
+
+Real-time weather intelligence
+Disaster risk assessment
+Grad-CAM explainability
+Batch image analysis
+PDF report generation
+Interactive dashboard visualization
+✨ Features
+🤖 AI Disaster Classification
+Multi-class disaster image classification
+MobileNetV2-based transfer learning model
+Confidence score generation
+Fast inference
+🔍 Explainable AI
+Grad-CAM visualization
+Model decision interpretation
+Visual attention heatmaps
+📊 Risk Assessment
+Single image analysis
+Batch area risk assessment
+Risk zone categorization
+Confidence-based evaluation
+🌍 Real-Time Intelligence
+OpenWeatherMap API integration
+Live weather monitoring
+Temperature and humidity tracking
+Weather-aware risk evaluation
+🚨 Disaster Intelligence
+Disaster feed integration
+Risk scoring engine
+Situational awareness support
+📄 Automated Reporting
+PDF report generation
+Prediction summaries
+Risk assessment reports
+🖥 Interactive Dashboard
+Streamlit-based UI
+Visualization tools
+Real-time prediction interface
+🏗 System Architecture
+Image Input
+     │
+     ▼
+Preprocessing
+     │
+     ▼
+MobileNetV2 Model
+     │
+     ▼
+Prediction + Confidence
+     │
+     ├── Grad-CAM Visualization
+     ├── Weather Intelligence
+     ├── Disaster Feed
+     ▼
+Risk Engine
+     │
+     ▼
+Dashboard + PDF Report
 ## 📊 Dataset
 
 - **Source:** [Kaggle - Disaster Damage 5-Class Dataset](https://www.kaggle.com/datasets/sarthaktandulje/disaster-damage-5class)
-- **Total Images:** 8,081
-- **Classes:** Fire (2537), Flood (2706), Landslide (310), Normal (2226), Smoke (302)
-
+Dataset Statistics
+Class	Images
+Fire	2537
+Flood	2706
+Landslide	310
+Normal	2226
+Smoke	302
+Total	8081
+Challenges
+Significant class imbalance
+Limited computational resources
+Small sample sizes for Landslide and Smoke classes
 ## 🧠 Model
 
-- **Architecture:** MobileNetV2 (pretrained on ImageNet) with a custom classifier head
-- **Approach:** Transfer learning with frozen backbone — only the final classifier layer is trained
-- **Why this approach:** With limited CPU resources and a class-imbalanced dataset (landslide/smoke have far fewer samples), training from scratch was impractical. Transfer learning leverages pretrained visual features, drastically reducing training time while maintaining strong accuracy.
+Architecture
+MobileNetV2 (Pretrained on ImageNet)
+Custom classification head
+Transfer Learning approach
+Why MobileNetV2?
+Lightweight architecture
+Fast training and inference
+Suitable for limited hardware resources
+Strong performance on image classification tasks
+Training Strategy
+Frozen backbone
+Trained classifier head
+Weighted Cross-Entropy Loss
+Class imbalance handling using:
+compute_class_weight()
+
+from Scikit-Learn.
 - **Class Imbalance Handling:** Weighted Cross-Entropy Loss using `sklearn.compute_class_weight`
 
-## 📈 Results
+📈 Model Performance
+Validation Accuracy
 
-- **Overall Validation Accuracy:** 89%
+89%
 
 | Class | Precision | Recall | F1-Score |
 |-----------|-----------|--------|----------|
@@ -33,14 +129,99 @@ A computer vision system that classifies disaster-related images into 5 categori
 ### Confusion Matrix
 ![Confusion Matrix](reports/confusion_matrix.png)
 
-## 🖥️ Tech Stack
+🛠 Technology Stack
+Programming Language
+Python
+Deep Learning
+PyTorch
+Torchvision
+Computer Vision
+OpenCV
+Data Processing
+NumPy
+Pandas
+Visualization
+Matplotlib
+Seaborn
+Machine Learning
+Scikit-Learn
+Dashboard
+Streamlit
+APIs
+OpenWeatherMap API
 
-- Python, PyTorch, Torchvision
-- NumPy, Pandas, Matplotlib, Seaborn
-- OpenCV
-- Streamlit
-- scikit-learn
+📂 Project Structure
+AI_Disaster_Intelligence_System/
+│
+├── app.py
+├── weather_service.py
+├── disaster_feed.py
+├── risk_engine.py
+│
+├── src/
+│   ├── model.py
+│   ├── predict.py
+│   ├── gradcam.py
+│   └── utils.py
+│
+├── reports/
+├── sample_images/
+├── notebooks/
+├── requirements.txt
+├── README.md
+└── .gitignore
+🚀 Installation
+Clone Repository
+git clone https://github.com/aayushi1806sharma-afk/Repository-name-AI-Disaster-Intelligence-System.git
+cd Repository-name-AI-Disaster-Intelligence-System
+Create Virtual Environment
+python -m venv venv
+Activate Environment
+Windows
+venv\Scripts\activate
+Linux / Mac
+source venv/bin/activate
+Install Dependencies
+pip install -r requirements.txt
+Run Application
+streamlit run app.py
+🌦 Weather API Configuration
 
-## 🚀 How to Run
+Create a .env file:
 
-1. Clone the repository:
+OPENWEATHER_API_KEY=YOUR_API_KEY
+🎯 Future Improvements
+Satellite image integration
+GIS mapping support
+Live disaster alert dashboards
+Multi-disaster severity estimation
+Cloud deployment
+Mobile application support
+📚 Learning Outcomes
+
+This project helped in understanding:
+
+Transfer Learning
+Computer Vision
+Deep Learning Model Deployment
+Explainable AI (Grad-CAM)
+Risk Assessment Systems
+Streamlit Application Development
+API Integration
+End-to-End ML Project Development
+👩‍💻 Author
+
+Aayushi Sharma
+
+Final Year B.Tech Student
+
+Passionate about:
+
+Artificial Intelligence
+Machine Learning
+Deep Learning
+Computer Vision
+Software Development
+⭐ If you found this project useful
+
+Consider giving the repository a star.
